@@ -1,0 +1,1067 @@
+/* -------------------------- 
+    Variables 
+----------------------------- */
+@font-face {
+    font-family: "Fuente-Reforestamos";
+    src: url('./fonts/BarlowCondensed-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --verde-oscuro: #065f46;
+    --verde-muy-oscuro: #064e3b;
+    --verde-700: #047857;
+    --verde-800: #065f46;
+    --gris-50: #f9fafb;
+    --gris-100: #f3f4f6;
+    --gris-600: #4b5563;
+    --gris-700: #374151;
+    --gris-900: #111827;
+
+    --primary-green: #036935;
+    --secondary-green: #2d7a4f;
+    --light-green: #4a9d6f;
+    --accent-green: #67b88e;
+    --dark-green: #0f3d25;
+    --earth-brown: #8b6f47;
+    --soft-cream: #f8f6f2;
+    --white: #ffffff;
+}
+
+/* ------------------------- 
+    Generales 
+---------------------------- */    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fuente-Reforestamos', serif;
+    background: url('../imgs/Insumos/fondo verde.png') center / cover fixed no-repeat;
+    color: var(--gris-700);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fuente-Reforestamos', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Secciones */
+section {
+    padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 20px;
+    }
+}
+
+/* ------------------------- 
+    Componentes 
+---------------------------- */
+
+/* Backgrounds de colores */
+.bg-verde-800 {
+    background-color: #065f46 !important;
+}
+
+.bg-verde-700 {
+    background-color: #047857 !important;
+}
+
+.bg-gris-50 {
+    background-color: var(--gris-50) !important;
+}
+
+/* Text colors */
+.text-verde-700 {
+    color: var(--verde-700) !important;
+}
+
+.text-gris-600 {
+    color: var(--gris-600) !important;
+}
+
+/* Links */
+a.text-verde-700:hover {
+    color: var(--verde-muy-oscuro) !important;
+}
+
+/* Sombras personalizadas */
+.shadow-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.shadow-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+}
+
+.shadow-modern {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón principal */
+.btn-white-custom {
+    width: 300px;
+    color: var(--verde-oscuro);
+    background-color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.btn-white-custom:hover {
+    color: var(--verde-muy-oscuro);
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .btn-white-custom {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 24px;
+    }
+}
+
+/* Botón custom */
+.btn-primary-custom {
+    width: 200px;
+    background-color: var(--verde-oscuro);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--verde-muy-oscuro);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .btn-primary-custom {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 24px;
+    }
+}
+
+/* btn saber más hero */
+.btn-saber-mas {
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    color: var(--primary-green);
+    background-color: white;
+    padding: 12px 5px;
+    font-weight: 400;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-saber-mas:hover {
+    color: var(--white);
+    background-color: var(--primary-green);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.saber-mas-arrow {
+    margin-left: 5px;
+}
+
+.saber-mas-arrow i {
+    color: var(--primary-green);
+    transition: all 0.3s ease;
+}
+
+.btn-saber-mas:hover i {
+    color: var(--white) !important;
+}
+
+.subtitle-content {
+    width: 100%;
+    padding: 15px;
+    background-color: #0a4823ad;
+    color: var(--white);
+    border-radius: 8px;
+}
+
+/* Línea decorativa */
+.line-accent {
+    width: 60px;
+    height: 3px;
+    background-color: var(--verde-oscuro);
+    margin: 0 auto 1.5rem;
+}
+
+/* ---------------------------------
+    Header - MEJORADO PARA MÓVIL
+----------------------------------*/
+
+.navegacion-principal {
+    padding: 10px 15px;
+    transition: all 0.6s ease;
+}
+
+.link-nav-principal {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.link-nav-principal:hover {
+    color: var(--accent-green);
+}
+
+/* Botón hamburguesa personalizado */
+.navbar-toggler {
+    border: 2px solid rgba(3, 105, 53, 0.95);
+    padding: 8px 12px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%283, 105, 53, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Navegación móvil */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(3, 105, 53, 0.95);
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 8px;
+    }
+
+    #nav-link-rm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link-nav-principal {
+        padding: 10px 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Navegación contacto */
+.nav-contacto {
+    flex-wrap: wrap;
+}
+
+.nav-red-social {
+    padding-right: 12px;
+}
+
+.nav-tel a,
+.nav-email a,
+.nav-red-social a {
+    color: var(--primary-green);
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+.nav-tel a:hover,
+.nav-email a:hover {
+    color: var(--verde-muy-oscuro);
+}
+
+.nav-red-social ul li a:hover i {
+    transform: scale(1.2);
+    color: var(--verde-oscuro);
+}
+
+/*-------------------------------- 
+    Hero - MEJORADO PARA MÓVIL
+--------------------------------*/
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-content-hero {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.hero-container-logo-letter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+
+    .hero-container-logo-letter {
+        display: grid;
+
+    }    
+
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .logo-content-hero img {
+        max-width: 150px !important;
+        margin-left: 50px;
+    }
+
+
+}
+
+/* -----------------------------
+    Introducción - Experiencia - MEJORADO
+-------------------------------*/
+.experience-section {
+}
+
+.experience-subtitle {
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .experience-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .subtitle-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Video institucional */
+.video-section {
+    display: grid;
+    align-items: center;
+}
+
+.video-institucional {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.rrss-footer-list {
+    padding: 0;
+    list-style: none;
+}
+
+.rrss-footer-list li {
+    list-style: none;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.rrss-footer-list li:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------------- 
+    Metodología - MEJORADO
+-------------------------------- */
+.metodologia {
+    padding: 80px 20px;
+}
+
+.metodologia-text h1 {
+    color: var(--white);
+    margin-bottom: 50px;
+}
+
+.metodologia-text h3 {
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+@media (max-width: 768px) {
+    .metodologia-text h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .metodologia-text h3 {
+        font-size: 1.1rem;
+    }
+}
+
+.img-metodologia {
+    border-radius: 12px;
+    padding: 20px;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-metodologia img {
+    border-radius: 10px;
+    width: 700px;
+}
+
+
+.texto-metodologia h3 {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .img-metodologia img {
+        width: 400px;
+    }
+
+    .texto-metodologia h3 {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ----------------------------- 
+    Beneficios - MEJORADO
+-------------------------------- */
+.benefits-section {
+    padding: 80px 20px;
+}
+
+.content-beneficios {
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .content-beneficios {
+        padding: 0 10px;
+    }
+}
+
+
+.benefit-card {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.benefit-card h4 {
+    color: #145d35;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: var(--gris-600);
+}
+
+.benefit-card ul {
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.benefit-card ul > li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .benefit-card {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .benefit-card ul > li {
+        font-size: .95rem;
+    }
+}
+
+/* Iconos */
+.container-icon-beneficios {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.content-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-ods {
+    display: grid;
+    align-items: center;
+}
+
+.icon-ods img {
+    width: 80px;
+    border-radius: 12px;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon img {
+    width: 70px;
+}
+
+.icon-filtracion-agua {
+    background-color: #00AED9;
+}
+
+.icon-captura-carbono {
+    background-color: #3f7e44;
+}
+
+.icon-proteccion-biodiversidad {
+    background-color: #56c02b;
+}
+
+.icon-desarrollo-comunidad {
+    background-color: #A21942;
+}
+
+/* ----------------------------
+    Resultados - MEJORADO
+-----------------------------  */
+.stat-card {
+    min-height: 220px;
+    background-color: #fff;
+    color: #145d35;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+
+    display: grid;
+    align-items: center;
+}
+
+.stat-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.stat-numero {
+    color: #145d35;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.stat-card h4 {
+    color: #145d35;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        min-height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .stat-numero {
+        font-size: 2rem;
+    }
+
+    .stat-card h4 {
+        font-size: 1rem;
+    }
+}
+
+/* ===================================
+    NUEVA SECCIÓN: LÍNEA DEL TIEMPO
+=================================== */
+.timeline-section {
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Línea central */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, transparent, white, transparent);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+}
+
+/* Contenedor de cada item */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Los círculos en la línea */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid var(--primary-green);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Items de la izquierda */
+.timeline-item.left {
+    left: 0;
+}
+
+/* Items de la derecha */
+.timeline-item.right {
+    left: 50%;
+}
+
+/* Círculos para items de la derecha */
+.timeline-item.right::after {
+    left: -13px;
+}
+
+/* Contenido de cada item */
+.timeline-content {
+    padding: 25px 30px;
+    background: white;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+   display: grid;
+   justify-content: center;
+   text-align: center;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Flechas del contenido */
+.timeline-item.left .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+.timeline-item.right .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    border-width: 10px 15px 10px 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+/* Año destacado */
+.timeline-year {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    color: var(--primary-green);
+    margin: 15px 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.timeline-content p {
+    color: var(--gris-700);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 18px;
+        right: auto;
+    }
+
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-year {
+        font-size: 1.2rem;
+        padding: 6px 15px;
+    }
+}
+
+.aliado-membresia-logo {
+    width: 380px;
+    height: 250px;
+    margin: 20px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===================================
+    CARRUSEL DE ALIADOS
+=================================== */
+.aliados-section {
+    padding: 80px 20px;
+}
+
+.aliados-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logos destacados */
+.aliados-mayores-content {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.aliado-mayor-logo {
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aliado-mayor-logo img {
+    filter: grayscale(0);
+    transition: all 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.aliado-mayor-logo img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* Carrusel Swiper */
+.aliados-swiper {
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+.aliado-logo-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    transition: all 0.3s ease;
+}
+
+.aliado-logo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.aliado-logo-card img {
+    max-width: 180px;
+    max-height: 100px;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.aliado-logo-card:hover img {
+    filter: grayscale(0);
+}
+
+/* Botones de navegación del carrusel */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-green);
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: var(--primary-green);
+    color: white;
+}
+
+/* Paginación del carrusel */
+.swiper-pagination-bullet {
+    background: var(--primary-green);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 16px;
+    }
+}
+
+/* ----------------------------- 
+    Formulario - MEJORADO
+----------------------------- */
+.form-custom {
+    background-color: var(--gris-50);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.form-custom .form-control,
+.form-custom .form-select {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.form-custom .form-control:focus,
+.form-custom .form-select:focus {
+    border-color: var(--verde-700);
+    box-shadow: 0 0 0 0.2rem rgba(6, 95, 70, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-custom label {
+    font-weight: 600;
+    color: var(--gris-700);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .form-custom {
+        padding: 1.5rem;
+    }
+}
+
+/* Contacto cards */
+.contacto-card {
+    background-color: var(--gris-50);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contacto-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+}
+
+/* ----------------------------- 
+    Footer - MEJORADO
+----------------------------- */
+footer {
+    background-image: url('../imgs/Insumos/fondo verde.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 3rem 0;
+}
+
+.rrss-footer-list li a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.rrss-footer-list li a:hover {
+    color: var(--accent-green);
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 0;
+    }
+
+    .rrss-footer-list li a {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===================================
+    ANIMACIONES Y TRANSICIONES
+=================================== */
+
+/* Fade in desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left,
+.slide-in-right {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Animación para los números de estadísticas */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stat-numero {
+    animation: countUp 0.6s ease-out;
+}

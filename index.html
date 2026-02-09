@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforestamos México</title>
+    <meta name="description" content="Conecta tu empresa con soluciones basadas en la naturaleza. Más de 20 años impulsando la conservación de bosques en México.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <!-- Swiper CSS para el carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navegacion">
+        <!-- Navegación principal -->
+        <nav class="fixed-top navegacion-principal"> 
+            <div class="container d-flex flex-wrap align-items-center justify-content-between
+            "> 
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"> 
+                    <img src="./imgs/Insumos/LOGO REFORESTAMOS VECTORES-01 (1).png" class="img-fluid d-none logo-sin-scroll" style="width: 160px;" alt="Logo Reforestamos México">
+                    <img src="./imgs/Insumos/LOGO REFORESTAMOS FONDO TRANSPARENTE.png" class="img-fluid d-none logo-con-scroll" style="width: 140px; padding: 4px;" alt="">
+                </a> 
+
+                <!-- Botón hamburguesa para móvil -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav col-12 me-lg-auto mb-2 justify-content-center mb-md-0" id="nav-link-rm"> 
+                        <li><a href="#experience-section" class="nav-link px-2 link-nav-principal">Experiencia</a></li> 
+                        <li><a href="#metodologia" class="nav-link px-2 link-nav-principal">Metodología</a></li>
+                        <li><a href="#beneficios" class="nav-link px-2 link-nav-principal">Beneficios</a></li> 
+                        <li><a href="#resultados" class="nav-link px-2 link-nav-principal">Resultados</a></li> 
+                        <li><a href="#timeline-section" class="nav-link px-2 link-nav-principal">Historia</a></li> 
+                        <li><a href="#aliados-section" class="nav-link px-2 link-nav-principal">Aliados</a></li> 
+                    </ul> 
+                </div>
+            </div> 
+        </nav>    
+
+        <!-- Navegación rrss-->
+        <nav class="nav-rrss fixed-bottom d-none d-md-flex align-items-center justify-content-between p-1" style="background: radial-gradient(circle at center , #fffad2, #f2dc8e, #f0df00, #f0df00 , #c9961a, #c9961a) ;">
+            <div class="nav-contacto d-flex align-items-center text-white">
+                <div class="nav-tel mx-2 d-flex align-items-center justify-content-center text-white"> 
+                    <a href="tel:+525555148670"> <i class="bi bi-telephone" style="font-size:25px;"></i></a> 
+                    <a href="tel:+525555148670" class="tel ms-1 d-none d-md-flex">+52 (55) 5514 8670</a>
+                </div>
+
+                <div class="nav-email mx-2 d-flex align-items-center justify-content-center text-white"> 
+                    <a href="mailto:contacto@reforestamos.org" class="email"> <i class="bi bi-envelope-at" style="font-size:25px;"></i></a> 
+                    <a href="mailto:contacto@reforestamos.org" class="email ms-1 d-none d-md-flex">contacto@reforestamos.org</a>
+                </div>
+            </div>
+
+            <div class="nav-red-social"> 
+                <ul class="d-flex justify-content-center rrss-footer-list m-0" style="color: rgba(0, 0, 0, .6);">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+                    <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="#"><i class="bi bi-threads-fill"></i></a></li>
+                </ul>  
+            </div>
+        </nav>  
+    </header>
+    
+    <!-- Hero Section --> 
+    <section class="hero-section" style="background: url('imgs/cabezal.jpg') center / cover fixed no-repeat;">        
+        <div class="hero-content">            
+            <div class="container">
+                <div class="row hero-container-logo-letter">
+                    <div class="col-3">
+                        <div class="logo-content-hero mb-4">
+                            <img src="./imgs/Insumos/LOGO REFORESTAMOS VECTORES-01 (1).png" class="img-fluid" style="max-width: 180px;" alt="Logo Reforestamos México">
+                        </div>
+                    </div>
+                    <div class="col-7 text-start">
+                            <h1 class="display-5 display-md-4 fw-bold mb-4 text-white">
+                                Juntos alcancemos tus metas <br class="d-none d-md-block">ambientales, sociales y de gobernanza.
+                            </h1>
+
+                            <a href="#experience-section" class="btn-saber-mas"> 
+                                Conoce más
+                                <span class="saber-mas-arrow"> 
+                                    <i class="bi bi-arrow-down-circle"></i>
+                                </span>
+                            </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducción / Experiencia -->
+    <section class="experience-section" id="experience-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0 slide-in-left">
+                    <div class="subtitle-content">
+                        <h2 class="display-6 section-title">Más de dos décadas de experiencia, compromiso y resultados</h2>
+                    </div>
+                    
+                    <p class="experience-subtitle" style="margin-top: 1rem;">
+                        Impulsamos soluciones basadas en la naturaleza para contribuir a los retos 
+                        de sostenibilidad del sector privado.
+                    </p>
+
+                    <p class="experience-subtitle">
+                        Actuamos con profesionalismo, experiencia y convicción, convencidos de que los 
+                        bosques son fundamentales para alcanzar las metas de desarrollo sostenible 2030.
+                    </p>
+                </div>
+                <div class="col-lg-6 slide-in-right video-section">
+                    <video class="video-institucional" autoplay loop muted playsinline poster="imgs/img-hero.jpeg" id="videoInstitucional">
+                        <source src="./imgs/Insumos/video institucional prueba 3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología -->
+    <section class="metodologia" id="metodologia">
+        <div class="container">
+            <div class="subtitle-content">
+                <h2 class="display-6 section-title text-center">Cuidar los bosques es una inversión para la sostenibilidad de tu empresa.</h2>
+            </div> 
+
+            <div class="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
+                <div class="col metodologia-text">
+                    <h1>Tenemos una metodología probada y con resultados medibles.</h1>
+
+                    <h3 class="text-white">
+                        Nuestra metodología integra diversas estrategias <br class="d-none d-lg-block">
+                        y actores para el cuidado de los bosques para <br class="d-none d-lg-block">
+                        ayudarte a cumplir tu agenda ESG 
+                    </h3>
+                </div>
+
+                <div class="col" style="margin-top: 50px;">
+                    <div class="img-metodologia">                     
+      
+                        <img src="./imgs/Insumos/Esquema_ods_terminado.png" class="img-fluid"  alt="">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="benefits-section">
+        <div class="container">
+            <div class="subtitle-content">
+                <h2 class="display-5 section-title text-center">¿Cuáles son los beneficios principales de conservar los bosques?</h2>
+            </div>            
+
+            <div class="row row-cols-1 row-cols-md-2 g-4 content-beneficios">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h4 class="text-center text-benefits">Infiltración y recarga hídrica</h4>
+                        <ul>
+                            <li>Mejorar la infiltración del agua y la recarga de acuíferos.</li>
+                            <li>Reducir la erosión y la escorrentía superficial.</li>
+                            <li>Proteger zonas clave para la seguridad hídrica frente a la expansión urbana y agrícola.</li>
+                        </ul>
+                       
+                        <div class="container-icon-beneficios">
+                            <div class="content-icon">
+                                <div class="benefit-icon icon-filtracion-agua">
+                                    <img src="./imgs/Insumos/infiltracio╠ün.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="icon-ods">
+                                <img src="./imgs/Insumos/ods6.png" class="img-fluid" alt="icon ODS 6">
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h4 class="text-center text-benefits">Captura de carbono</h4>
+                        
+                        <ul>
+                            <li>Incremento de cobertura vegetal y suelos funcionales.</li>
+                            <li>Manejo forestal sostenible y certificado.</li>
+                            <li>Enfoques de paisaje que aumentan la resiliencia climática de los territorios.</li>
+                        </ul>  	
+
+                        <div class="container-icon-beneficios">
+                            <div class="content-icon">
+                                <div class="benefit-icon icon-captura-carbono">
+                                    <img src="./imgs/Insumos/captura.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="icon-ods">
+                                <img src="./imgs/Insumos/ods13.png" class="img-fluid" alt="Imagen ODS 13">
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h4 class="text-center text-benefits">Protección de la biodiversidad</h4>
+
+                        <ul>
+                            <li>Protegen hábitats prioritarios y especies nativas.</li>
+                            <li>Favorecen la conectividad ecológica mediante la selección estratégica de sitios apoyada por sistemas de información geoespacial.</li>
+                            <li>Fortalecen el conocimiento y la vigilancia ciudadana sobre el arbolado urbano, rural y silvestre.</li>
+                        </ul>  
+
+                        <div class="container-icon-beneficios">
+                            <div class="content-icon">
+                                <div class="benefit-icon icon-proteccion-biodiversidad">
+                                    <img src="./imgs/Insumos/proteccio╠ün.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="icon-ods">
+                                <img src="./imgs/Insumos/ods15.png" class="img-fluid" alt="">
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h4 class="text-center text-benefits">Desarrollo comunitario</h4>
+                        <ul>
+                            <li>Fortalecimiento de capacidades comunitarias mediante brigadas forestales y manejo certificado.</li>
+                            <li>Generación de beneficios económicos y organizativos en ejidos y comunidades forestales.</li>
+                            <li>Articulación de alianzas con OSC, empresas, gobiernos y agencias de cooperación, consolidando una agenda forestal de largo plazo.</li>
+                        </ul>
+
+                        <div class="container-icon-beneficios">
+                            <div class="content-icon">
+                                <div class="benefit-icon icon-desarrollo-comunidad">
+                                    <img src="./imgs/Insumos/desarrollo.png" class="img-fluid" alt="imagen desarrollo comunitario">
+                                </div>
+                            </div>
+                            <div class="icon-ods">
+                                <img src="./imgs/Insumos/ods8.png" class="img-fluid" alt="">
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>  
+
+    <!-- Resultados -->
+    <section class="text-white" id="resultados">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3 text-white">Logros 2025</h2>
+            </div>
+
+            <div class="row g-4 mb-5" id="contenido-resultados">
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-numero mb-2">+ <span class="data-arboles" data-target="310">0</span> mil</div>
+                        <h4 class="small">Árboles plantados</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-numero mb-2">+ <span class="data-hectareas" data-target="114">0</span> mil</div>
+                        <h4 class="small">Hectáreas bajo conservación, restauración y manejo forestal</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-numero mb-2"><span class="data-empresas" data-target="92">0</span></div>
+                        <h4 class="small">Empresas aliadas</h4>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-numero mb-2"><span class="data-ejidos" data-target="39">0</span></div>
+                        <h4 class="small">Ejidos y comunidades</h4>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="subtitle-content text-center">¡Gracias a nuestros aliados!</h1>
+        </div>
+
+        <div class="container conservation-content programas-aliados" style="margin-top: 150px;">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="section-title text-white mb-4" style="font-size: 2.5rem;">
+                        Conservar los bosques es tan importante como reforestarlos
+                    </h1>
+                    <p class="texto-programas" style="font-size: 1.5rem; line-height: 1.8; margin-bottom: 3rem;">
+                        Reforestamos México ofrece opciones de inversión en bosques, diseñados para que tu 
+                        empresa genere un impacto real y medible con trazabilidad y acompañamiento técnico.
+                    </p>
+                    <a href="#contacto-section" class="btn btn-white-custom">
+                        Descubre las opciones de inversión
+                    </a>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <!-- NUEVA SECCIÓN: Línea del Tiempo -->
+    <section class="timeline-section" id="timeline-section">
+        <div class="container">
+            <div class="subtitle-content">
+                <h2 class="display-5 section-title text-center ">Nuestros Premios</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2009</div>
+                        <h3></h3>
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/Captura de pantalla 2026-01-27 a la(s) 9.10.11ΓÇ»a.m..png" class="img-fluid" width="150" alt="">
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">Desde 2016</div>
+                        <h3></h3>
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo-cemefi.jpg" class="img-fluid" width="150" alt="">
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3></h3>
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/ganar ganar.jpg" class="img-fluid" width="200" alt="">
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3></h3>
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/reconocimiento a la conservacio╠ün.jpg" class="img-fluid" width="250" alt="">
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3></h3>
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/min_121219-161229_clares.jpg" class="img-fluid" width="250" alt="">
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <h3></h3>
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/XOCHITLA.png" class="img-fluid" width="150" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Membresías y representaciones -->
+        <div class="container" style="margin-top: 40px;">
+            <div class="subtitle-content">
+                <h2 class="display-5 section-title text-center ">Membresías y Representaciones</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 justify-content-center mb-5" style="border-radius: 14px; margin-top: 30px;">
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
+                    <img src="./imgs/Premios-Reconocimientos--redenciales/Bussiness_for_nature_UICN.png" class="img-fluid" style="max-width: 320px;" alt="Bimbo">
+                </div>
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
+                    <h3 class="text-center mb-2" style="color: #036935;">Miembro del consejo asesor</h3>
+
+                    <div class="col d-flex justify-content-center">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_cumbres_de_monterrey.png" class="img-fluid" style="max-width: 140px;" alt="Santander">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_desierto_leones.png" class="img-fluid" style="max-width: 140px;" alt="Fundación Uno">                        
+                    </div>
+                </div>
+
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
+                    <h3 class="text-center" style="color: #036935;">Representante</h3>
+
+                    <div class="col d-flex justify-content-center align-items-center" style="margin-top: 20px; margin-bottom: 30px;">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_1t_mexico.png" class="img-fluid" style="max-width: 240px;" alt="Audubon">
+                    </div>
+                </div>
+
+            </div>            
+        </div>
+
+        <!-- Cofundaciones -->
+        <div class="container" style="margin-top: 40px;">
+            <div class="subtitle-content">
+                <h2 class="display-5 section-title text-center ">Cofundaciones</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 justify-content-center mb-5" style="border-radius: 14px; margin-top: 30px;">
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
+                    <img src="./imgs/Premios-Reconocimientos--redenciales/AMEBIN.png" class="img-fluid" style="max-width: 270px;" alt="Bimbo">
+                </div>
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
+                    <img src="./imgs/Premios-Reconocimientos--redenciales/AMERE.png" class="img-fluid" style="max-width: 300px;" alt="Santander">
+                </div>
+
+            </div>            
+        </div>        
+    </section>
+
+    <!-- Aliados section con Carrusel -->
+    <section class="aliados-section" style="background-color: #fff;" id="aliados-section">
+        <div class="container aliados-container">
+            <div class="text-center mb-5 contenido-titulo">
+                <h1 class="text-center display-5 fw-semibold" style="margin: 30px; color: #036935;">Agradecemos la confianza de nuestros aliados</h1>
+                <div class="line-accent"></div>
+            </div>   
+            
+            <!-- Aliados Principales (destacados) -->
+            <div class="row row-cols-1 row-cols-md-4 row-cols-lg-4 p-1 justify-content-center mb-5" style="border-radius: 14px;">
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-mayor-logo">
+                    <img src="./imgs/Aliados/LOGO-BIMBO-2025-scaled.webp" class="img-fluid" style="max-width: 250px;" alt="Bimbo">
+                </div>
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-mayor-logo">
+                    <img src="./imgs/Aliados/Santander.webp" class="img-fluid" style="max-width: 280px;" alt="Santander">
+                </div>
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-mayor-logo">
+                    <img src="./imgs/Aliados/LOGOS-FUNDACIONFUNO-001-BAJA-01.webp" class="img-fluid" style="max-width: 170px;" alt="Fundación Uno">
+                </div>
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-mayor-logo">
+                    <img src="./imgs/Aliados/logo_audubon_crane.png" class="img-fluid" style="max-width: 220px;" alt="Audubon">
+                </div>
+                <div class="col d-grid align-items-center justify-content-center p-2 aliado-mayor-logo">
+                    <img src="./imgs/Aliados/Imagotipo-color-2.webp" class="img-fluid" style="max-width: 185px;" alt="Aliado">
+                </div>  
+            </div>
+
+            <!-- Carrusel de Otros Aliados -->
+            <div class="text-center mb-4">
+                <h3 style="color: #036935;"></h3>
+            </div>
+            
+            <div class="swiper aliados-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/LOGO-BIMBO-2025-scaled.webp" class="img-fluid" alt="Bimbo">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/Santander.webp" class="img-fluid" alt="Santander">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/LOGOS-FUNDACIONFUNO-001-BAJA-01.webp" class="img-fluid" alt="Fundación Uno">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/logo_audubon_crane.png" class="img-fluid" alt="Audubon">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/Imagotipo-color-2.webp" class="img-fluid" alt="Aliado">
+                        </div>
+                    </div>
+                    <!-- Puedes agregar más slides aquí -->
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/LOGO-BIMBO-2025-scaled.webp" class="img-fluid" alt="Bimbo">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="aliado-logo-card">
+                            <img src="./imgs/Aliados/Santander.webp" class="img-fluid" alt="Santander">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navegación -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto-section" class="bg-white">
+        <div class="container">
+            <div class="text-center mb-5 contenido-titulo">
+                <h2 class="display-5 fw-bold mb-3" style="color: #036935;">
+                    Juntos aseguramos más y mejores bosques.
+                </h2>
+                <div class="line-accent"></div>
+                <h2 class="text-gris-600">
+                    Permítenos transformar tus metas corporativas en acciones concretas.
+                </h2>
+                <h2>¡Contáctanos!</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form class="form-custom formulario-donantes-mayores" id="formulario-donantes-mayores">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label">Nombre completo *</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="empresa" class="form-label">Empresa *</label>
+                                <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa" required>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="puesto" class="form-label">Cargo *</label>
+                                <input type="text" class="form-control" id="puesto" name="puesto" placeholder="Cargo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="correo" class="form-label">Correo electrónico *</label>
+                                <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo electrónico" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked required>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Acepto el <a href="https://www.reforestamosmexico.org/aviso-de-privacidad/">aviso de privacidad</a> *
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Suscribirse al newsletter
+                                </label>
+                            </div>
+                        </div>                        
+
+                        <button type="submit" class="btn-primary-custom w-100">Enviar</button>
+
+                        <p class="text-center small text-muted mt-3 mb-0 mensaje-status-formulario">
+                            Los datos proporcionados serán tratados de forma confidencial conforme a nuestra política de privacidad.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-site">
+        <div class="container">
+            <div class="row row-cols-1 justify-content-center">
+                <h4 class="text-white text-center">Síguenos en nuestras redes sociales</h4>
+
+                <div class="col d-flex justify-content-center">
+                    <ul class="d-flex justify-content-center rrss-footer-list">
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+                        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                        <li><a href="#"><i class="bi bi-threads-fill"></i></a></li>
+                    </ul>                    
+                </div>
+            </div>
+            <div class="pt-4 text-center">
+                <p class="small text-white-50 mb-0">
+                    © 2026<br>
+                    Reforestamos México A.C.<br>
+                    Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Swiper JS para el carrusel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="./src/script.js"></script>
+</body>
+</html>
