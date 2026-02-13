@@ -7,6 +7,7 @@
       initVideoObserver();
       initSmoothScroll();
       initFormSubmission();
+      initAliadosLogic();
   });
 
   // ===================================
@@ -17,6 +18,7 @@
       const nav = document.querySelector('.navegacion-principal');
       const logoSinScroll = document.querySelector('.logo-sin-scroll');
       const logoConScroll = document.querySelector('.logo-con-scroll');
+      
       
       
       // Efecto de scroll en la navegación
@@ -390,3 +392,48 @@
           imageObserver.observe(img);
       });
   }
+  // ===================================
+// BOTÓN IR ARRIBA (BACK TO TOP)
+// ===================================
+
+// Obtener el botón
+let mybutton = document.getElementById("btnArriba");
+
+// Cuando el usuario hace scroll hacia abajo 300px, mostrar el botón
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Cuando el usuario hace clic, volver al inicio suavemente
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Scroll suave
+  });
+}
+// ===================================
+// LÓGICA DE VISUALIZACIÓN DE ALIADOS
+// ===================================
+
+function initAliadosLogic() {
+    const gridAliados = document.getElementById('grid-aliados-principales');
+    
+    if (gridAliados) {
+        const numeroDeAliados = gridAliados.querySelectorAll('.aliado-mayor-logo').length;
+        
+        // Si son 6 o menos, se oculta la cuadrícula
+        if (numeroDeAliados <= 6) {
+            gridAliados.style.display = 'none';
+            
+        } else {
+            // Si son más de 6
+            gridAliados.style.display = 'flex';
+        }
+    }
+}

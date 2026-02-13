@@ -487,18 +487,21 @@ a.text-verde-700:hover {
     }
 }
 
-
+/* ----------------------------- 
+    Ajuste de cards para ser del mismo tamaño
+-------------------------------- */
 .benefit-card {
-    min-height: 500px;
-    display: flex;
+display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    height: 100%; 
+    min-height: auto; /* Eliminamos cualquier altura fija previa */
     background-color: #fff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .benefit-card:hover {
     transform: translateY(-10px);
@@ -1064,4 +1067,98 @@ footer {
 
 .stat-numero {
     animation: countUp 0.6s ease-out;
+}
+/* =========================================
+   AJUSTES PARA TABLETS 
+   Rango: 768px a 1024px
+========================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* Ajustar tamaño del título principal para que no se vea enorme */
+    .hero-content h1 {
+        font-size: 2.5rem !important; 
+    }
+
+    /* Ajustar la altura de la portada */
+    .hero-section {
+        min-height: 60vh; /* Un poco menos alto que en escritorio */
+        padding-top: 100px; /* Para que no lo tape el menú de arriba */
+    }
+
+    /* Asegurar que las tarjetas de beneficios no se estiren demasiado */
+    .benefit-card {
+        min-height: auto; /* Dejar que crezcan según el contenido */
+        margin-bottom: 20px;
+    }
+
+    /* Ajustar el padding de la barra dorada inferior */
+    .nav-rrss {
+        padding: 5px 10px;
+    }
+
+    /* Reducir un poco los iconos sociales en el footer fijo */
+    .nav-red-social ul li a {
+        font-size: 1.2rem; 
+    }
+    
+    /* Ajuste para el timeline (Línea del tiempo) en vertical */
+    .timeline::after {
+        left: 31px; /* Mover la línea a la izquierda como en móvil */
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item.right {
+        left: 0;
+    }
+    
+    .timeline-item.left::after, .timeline-item.right::after {
+        left: 18px;
+    }
+    
+    /* Flechas del timeline apuntando siempre a la izquierda */
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+/* =========================================
+   BOTÓN IR ARRIBA (BACK TO TOP)
+========================================= */
+#btnArriba {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 80px; /* 80px para que quede ARRIBA del menú dorado (que mide aprox 60px) */
+    right: 20px;
+    z-index: 99; /* Asegura que flote sobre todo */
+    border: none;
+    outline: none;
+    background-color: var(--verde-oscuro); /* Tu color corporativo */
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%; /* Redondo */
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+#btnArriba:hover {
+    background-color: var(--accent-green); /* Color al pasar el mouse */
+    transform: translateY(-3px); /* Pequeña animación hacia arriba */
+}
+
+/* Ajuste para móviles para que no estorbe */
+@media (max-width: 768px) {
+    #btnArriba {
+        bottom: 15px; /* En móvil el menú dorado desaparece o cambia, así que lo bajamos */
+        right: 15px;
+    }
 }
