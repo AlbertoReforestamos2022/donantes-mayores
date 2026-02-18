@@ -8,6 +8,7 @@
       initSmoothScroll();
       initFormSubmission();
       initAliadosLogic();
+      initTimeline();
   });
 
   // ===================================
@@ -449,4 +450,26 @@ function initAliadosLogic() {
             }
         });
     }
+}
+
+// Agrega esto dentro de tu función principal de carga
+function initTimeline() {
+    const timelineSwiper = new Swiper('.timeline-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        grabCursor: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        navigation: {
+            nextEl: '.timeline-next',
+            prevEl: '.timeline-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 }
+        }
+    });
 }
