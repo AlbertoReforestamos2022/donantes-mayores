@@ -1162,3 +1162,40 @@ footer {
         right: 15px;
     }
 }
+
+/* Botón flotante de índice */
+.btn-indice {
+    position: fixed;
+    left: 20px;
+    bottom: 80px; /* Separado del botón de "subir" que ya tienes */
+    z-index: 1040;
+    background-color: #036935; /* Verde institucional */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-indice:hover {
+    background-color: #024d27;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Ajuste para el menú offcanvas */
+.list-group-item-action:hover {
+    border-left: 4px solid #036935;
+    background-color: #f8f9fa;
+    color: #036935;
+}
+
+/* Para que no choque con el botón de ir arriba en móviles */
+@media (max-width: 768px) {
+    .btn-indice {
+        bottom: 100px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

@@ -425,15 +425,28 @@ function initAliadosLogic() {
     const gridAliados = document.getElementById('grid-aliados-principales');
     
     if (gridAliados) {
-        const numeroDeAliados = gridAliados.querySelectorAll('.aliado-mayor-logo').length;
+        const aliados = gridAliados.querySelectorAll('.aliado-mayor-logo');
+        const numeroDeAliados = aliados.length;
         
-        // Si son 6 o menos, se oculta la cuadrícula
-        if (numeroDeAliados <= 6) {
-            gridAliados.style.display = 'none';
-            
+        // Visibilidad
+        gridAliados.style.display = 'flex';
+        
+        // Remover colisiones
+        gridAliados.classList.remove('justify-content-center', 'justify-content-start');
+
+        // Alineación si hay menos de 6 elementos:
+        if (numeroDeAliados < 6) {
+            gridAliados.classList.add('justify-content-center');
         } else {
-            // Si son más de 6
-            gridAliados.style.display = 'flex';
+            // Más de 6
+            gridAliados.classList.add('justify-content-center');
         }
+
+        // Si son menos de 3, se ajusta el espacio
+        aliados.forEach(aliado => {
+            if (numeroDeAliados <= 2) {
+                aliado.classList.replace('col-md-4', 'col-md-6'); 
+            }
+        });
     }
 }
