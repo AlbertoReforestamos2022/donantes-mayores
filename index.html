@@ -28,27 +28,11 @@
                     <img src="./imgs/Insumos/LOGO REFORESTAMOS VECTORES-01 (1).png" class="img-fluid d-none logo-sin-scroll" style="width: 160px;" alt="Logo Reforestamos México">
                     <img src="./imgs/Insumos/LOGO REFORESTAMOS FONDO TRANSPARENTE.png" class="img-fluid d-none logo-con-scroll" style="width: 140px; padding: 4px;" alt="">
                 </a> 
-
-                <!-- Botón hamburguesa para móvil -->
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav col-12 me-lg-auto mb-2 justify-content-center mb-md-0" id="nav-link-rm"> 
-                        <li><a href="#experience-section" class="nav-link px-2 link-nav-principal">Experiencia</a></li> 
-                        <li><a href="#metodologia" class="nav-link px-2 link-nav-principal">Metodología</a></li>
-                        <li><a href="#beneficios" class="nav-link px-2 link-nav-principal">Beneficios</a></li> 
-                        <li><a href="#resultados" class="nav-link px-2 link-nav-principal">Resultados</a></li> 
-                        <li><a href="#timeline-section" class="nav-link px-2 link-nav-principal">Historia</a></li> 
-                        <li><a href="#aliados-section" class="nav-link px-2 link-nav-principal">Aliados</a></li> 
-                    </ul> 
-                </div>
             </div> 
         </nav>    
 
         <!-- Navegación rrss-->
-        <nav class="nav-rrss fixed-bottom d-none d-md-flex align-items-center justify-content-between p-1" style="background: radial-gradient(circle at center , #fffad2, #f2dc8e, #f0df00, #f0df00 , #c9961a, #c9961a) ;">
+        <nav class="nav-rrss fixed-bottom d-flex align-items-center justify-content-between p-1" style="background: radial-gradient(circle at center , #fffad2, #f2dc8e, #f2dc8e, #f0df00, #f0df00 , #c9961a, #c9961a) ;">
             <div class="nav-contacto d-flex align-items-center text-white">
                 <div class="nav-tel mx-2 d-flex align-items-center justify-content-center text-white"> 
                     <a href="tel:+525555148670"> <i class="bi bi-telephone" style="font-size:25px;"></i></a> 
@@ -121,7 +105,7 @@
                 </div>
                 <div class="col-lg-6 slide-in-right video-section">
                     <video class="video-institucional" autoplay loop muted playsinline poster="imgs/img-hero.jpeg" id="videoInstitucional">
-                        <source src="./imgs/Insumos/video institucional prueba 3.mp4" type="video/mp4">
+                        <source src="https://comunicacinr.sg-host.com/imgs/videos/video%20institucional%20final%20aprobado.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -297,15 +281,15 @@
 
         <div class="container conservation-content programas-aliados" style="margin-top: 150px;">
             <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="section-title text-white mb-4" style="font-size: 2.5rem;">
+                <div class="col mx-auto text-center">
+                    <h1 class="section-title display-5 text-white mb-4">
                         Conservar los bosques es tan importante como reforestarlos
                     </h1>
-                    <p class="texto-programas" style="font-size: 1.5rem; line-height: 1.8; margin-bottom: 3rem;">
+                    <p class="texto-programas" style="font-size: 1.8rem; line-height: 1.8; margin-bottom: 2rem; margin-top: 2rem;">
                         Reforestamos México ofrece opciones de inversión en bosques, diseñados para que tu 
                         empresa genere un impacto real y medible con trazabilidad y acompañamiento técnico.
                     </p>
-                    <a href="#contacto-section" class="btn btn-white-custom">
+                    <a href="#contacto-section" class="btn btn-white-custom" style="font-size: 1.5rem;">
                         Descubre las opciones de inversión
                     </a>
                 </div>
@@ -313,80 +297,108 @@
         </div>        
     </section>
 
-    <!-- Línea del Tiempo -->
-    <section class="timeline-section" id="timeline-section">
+    <!-- NUEVA SECCIÓN: Línea del Tiempo -->
+    <section class="timeline-section bg-white" id="timeline-section">
         <div class="container">
-            <div class="subtitle-content">
-                <h2 class="display-5 section-title text-center ">Nuestros Premios</h2>
-            </div>
+            <div class="text-center mb-5 contenido-titulo">
+                <h1 class="text-center display-5 fw-semibold" style="margin: 30px; color: #036935;">Nuestros Premios</h1>
+                <div class="line-accent"></div>
+            </div>  
 
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2009</div>
-                        <h3></h3>
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/Captura de pantalla 2026-01-27 a la(s) 9.10.11ΓÇ»a.m..png" class="img-fluid" width="150" alt="">
+            <div class="swiper timeline-swiper">
+                <div class="swiper-wrapper align-items-center">
+                    
+                    <div class="swiper-slide swiper-bottom">
+                        <div class="timeline-h-item">
+                            <div class="timeline-h-card">
+                                <img src="./imgs/Premios-Reconocimientos--redenciales/PremioAlMerito.png" class="img-fluid" alt="Premio 2009">
+                                
+                            </div>
+                            <div class="timeline-h-year">2009</div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">Desde 2016</div>
-                        <h3></h3>
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo-cemefi.jpg" class="img-fluid" width="150" alt="">
+                    <div class="swiper-slide swiper-top">
+                        <div class="timeline-h-item">
+                            <div class="timeline-h-card">
+                                <img src="./imgs/Premios-Reconocimientos--redenciales/logo-cemefi.jpg" alt="Cemefi" style="width: 130px;">
+                            </div>
+                            
+                            <div class="timeline-h-year">2016</div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2018</div>
-                        <h3>Mejor caso de responsabilidad social</h3>
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/ganar ganar.jpg" class="img-fluid" width="200" alt="">
-                    </div>
-                </div>
+                    <div class="swiper-slide swiper-bottom">
+                        <div class="timeline-h-item">
+                            <div class="timeline-h-card">
+                                <img src="./imgs/Premios-Reconocimientos--redenciales/ganar ganar.jpg" class="img-fluid" alt="Ganar Ganar">
+                            </div>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2018</div>
-                        <h3></h3>
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/Reconocimiento_a_la_conservacion_de_la_naturaleza.png" class="img-fluid" width="250" alt="">
-                    </div>
-                </div>
+                            <p class=" text-center"> Mejor caso de responsabilidad social</p>
 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2018</div>
-                        <h3></h3>
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/min_121219-161229_clares.jpg" class="img-fluid" width="250" alt="">
+                            <div class="timeline-h-year">2018</div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2021</div>
-                        <h3></h3>
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/imagen premio Xochitla.png" class="img-fluid" width="180" alt="">
+                    <div class="swiper-slide swiper-top">
+                        <div class="timeline-h-item">
+                            <div class="timeline-h-card">
+                                <img src="./imgs/Premios-Reconocimientos--redenciales/min_121219-161229_clares.jpg" alt="Premio CLARES" style="width: 220px;">
+                            </div>
+                            <p class=" text-center">Premio CLARES a la Responsabilidad Social</p>
+
+                            <div class="timeline-h-year">2018</div>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="swiper-slide swiper-bottom">
+                        <div class="timeline-h-item">
+                            <div class="timeline-h-card">
+                                <img src="./imgs/Premios-Reconocimientos--redenciales\Reconocimiento_a_la_conservacion_de_la_naturaleza.png"  alt="Reconocimiento a la Conservación" style="width: 240px;">
+                            </div>
+                            <p class="">Reconocimiento a la Conservación</p>
+
+                            <div class="timeline-h-year">2018</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-top">
+                        <div class="timeline-h-item">
+                            
+                            <div class="timeline-h-card">
+                                <img src="./imgs/Premios-Reconocimientos--redenciales/imagen premio Xochitla.png" class="img-fluid" alt="Premio Xochitla">
+                            </div>
+                            <p class="">Premio Xochitla</p>
+
+                            <div class="timeline-h-year">2021</div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <div class="swiper-button-next timeline-next"></div>
+                    <div class="swiper-button-prev timeline-prev"></div>
+                    <!-- <div class="swiper-scrollbar mt-4"></div> -->
             </div>
         </div>
 
         <!-- Membresías y representaciones -->
         <div class="container" style="margin-top: 40px;">
-            <div class="subtitle-content">
-                <h2 class="display-5 section-title text-center ">Membresías y Representaciones</h2>
-            </div>
+            <div class="text-center mb-5 contenido-titulo">
+                <h1 class="text-center display-5 fw-semibold" style="margin: 30px; color: #036935;">Membresías y Representaciones</h1>
+                <div class="line-accent"></div>
+            </div>  
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 justify-content-center mb-5" style="border-radius: 14px; margin-top: 30px;">
                 <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
                     <div class="col d-flex justify-content-center align-items-center" style="margin-top: 20px; margin-bottom: 30px;">
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/UICN.png" class="img-fluid" style="max-width: 160px;" alt="UICN logo">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/UICN.png" class="img-fluid" style="max-width: 140px;" alt="UICN logo">
                     </div>
                 </div>
 
                 <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
                     <div class="col d-flex justify-content-center align-items-center" style="margin-top: 20px; margin-bottom: 30px;">
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/Bussiness_for_nature_solo.png" class="img-fluid" style="max-width: 200px;" alt="Bussines for nature Logo">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/Bussiness_for_nature_solo.png" class="img-fluid" style="max-width: 180px;" alt="Bussines for nature Logo">
                     </div>
                 </div>
             </div>            
@@ -396,8 +408,8 @@
                     <h3 class="text-center mb-2" style="color: #036935;">Miembro del consejo asesor</h3>
 
                     <div class="col d-flex justify-content-center">
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_cumbres_de_monterrey.png" class="img-fluid" style="max-width: 140px;" alt="Santander">
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_desierto_leones.png" class="img-fluid" style="max-width: 140px;" alt="Fundación Uno">                        
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_cumbres_de_monterrey.png" class="img-fluid" style="max-width: 120px;" alt="Logo cumbres de monterrey">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_desierto_leones.png" class="img-fluid" style="max-width: 120px;" alt="Logo Desierto de los Leones">                        
                     </div>
                 </div>
 
@@ -405,7 +417,7 @@
                     <h3 class="text-center" style="color: #036935;">Representante</h3>
 
                     <div class="col d-flex justify-content-center align-items-center" style="margin-top: 20px; margin-bottom: 30px;">
-                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_1t_mexico.png" class="img-fluid" style="max-width: 240px;" alt="Audubon">
+                        <img src="./imgs/Premios-Reconocimientos--redenciales/logo_1t_mexico.png" class="img-fluid" style="max-width: 200px;" alt="Audubon">
                     </div>
                 </div>
 
@@ -414,16 +426,17 @@
 
         <!-- Cofundaciones -->
         <div class="container" style="margin-top: 40px;">
-            <div class="subtitle-content">
-                <h2 class="display-5 section-title text-center ">Cofundaciones</h2>
-            </div>
+            <div class="text-center mb-5 contenido-titulo">
+                <h1 class="text-center display-5 fw-semibold" style="margin: 30px; color: #036935;">Cofundaciones</h1>
+                <div class="line-accent"></div>
+            </div> 
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 justify-content-center mb-5" style="border-radius: 14px; margin-top: 30px;">
                 <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
-                    <img src="./imgs/Premios-Reconocimientos--redenciales/AMEBIN.png" class="img-fluid" style="max-width: 270px;" alt="Bimbo">
+                    <img src="./imgs/Premios-Reconocimientos--redenciales/AMEBIN.png" class="img-fluid" style="max-width: 250px;" alt="Bimbo">
                 </div>
                 <div class="col d-grid align-items-center justify-content-center p-2 aliado-membresia-logo">
-                    <img src="./imgs/Premios-Reconocimientos--redenciales/AMERE.png" class="img-fluid" style="max-width: 300px;" alt="Santander">
+                    <img src="./imgs/Premios-Reconocimientos--redenciales/AMERE.png" class="img-fluid" style="max-width: 270px;" alt="Santander">
                 </div>
 
             </div>            
@@ -439,7 +452,7 @@
             </div>   
             
             <!-- Aliados Principales (destacados) -->
-            <div class="row row-cols-1 row-cols-md-4 row-cols-lg-4 p-1 justify-content-center mb-5" style="border-radius: 14px;">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4" id="grid-aliados-principales">
                 <div class="col d-grid align-items-center justify-content-center p-2 aliado-mayor-logo">
                     <img src="./imgs/Aliados/LOGO-BIMBO-2025-scaled.webp" class="img-fluid" style="max-width: 250px;" alt="Bimbo">
                 </div>
@@ -566,7 +579,10 @@
                             </div>
                         </div>                        
 
-                        <button type="submit" class="btn-primary-custom w-100">Enviar</button>
+                        <div class="row justify-content-center">
+                            <button type="submit" class="btn-primary-custom">Enviar</button>
+                        </div>
+                        
 
                         <p class="text-center small text-muted mt-3 mb-0 mensaje-status-formulario">
                             Los datos proporcionados serán tratados de forma confidencial conforme a nuestra política de privacidad.
@@ -596,7 +612,7 @@
                 </div>
             </div>
             <div class="pt-4 text-center">
-                <p class="small text-white-50 mb-0">
+                <p class="small text-white-50 mb-5">
                     © 2026<br>
                     Reforestamos México A.C.<br>
                     Todos los derechos reservados.
@@ -604,6 +620,49 @@
             </div>
         </div>
     </footer>
+
+    <button onclick="topFunction()" id="btnArriba" title="Ir al inicio">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Indice -->
+    <button class="btn-indice shadow" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasIndex" aria-controls="offcanvasIndex">
+        <i class="bi bi-list-ol me-2"></i> Índice
+    </button>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasIndex" aria-labelledby="offcanvasIndexLabel">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasIndexLabel" style="color: #036935;">
+            Contenido del Sitio
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+        <div class="list-group list-group-flush">
+        <a href="#experience-section" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+            <i class="bi bi-shield-check me-2"></i> Experiencia
+        </a>
+        <a href="#metodologia" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+            <i class="bi bi-gear me-2"></i> Metodología
+        </a>
+        <a href="#beneficios" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+            <i class="bi bi-heart-pulse me-2"></i> Beneficios
+        </a>
+        <a href="#resultados" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+            <i class="bi bi-graph-up-arrow me-2"></i> Resultados
+        </a>
+        <a href="#timeline-section" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+            <i class="bi bi-trophy me-2"></i> Historia y Premios
+        </a>
+        <a href="#aliados-section" class="list-group-item list-group-item-action py-3" data-bs-dismiss="offcanvas">
+            <i class="bi bi-people me-2"></i> Aliados
+        </a>
+        <a href="#contacto-section" class="list-group-item list-group-item-action py-3 bg-light fw-bold text-success" data-bs-dismiss="offcanvas">
+            <i class="bi bi-envelope me-2"></i> Contacto
+        </a>
+        </div>
+    </div>
+    </div>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

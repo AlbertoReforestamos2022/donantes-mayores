@@ -112,7 +112,6 @@ a.text-verde-700:hover {
 
 /* Botón principal */
 .btn-white-custom {
-    width: 300px;
     color: var(--verde-oscuro);
     background-color: white;
     padding: 14px 32px;
@@ -287,7 +286,7 @@ a.text-verde-700:hover {
 .nav-tel a,
 .nav-email a,
 .nav-red-social a {
-    color: var(--primary-green);
+    color: var(--white);
     text-decoration: none !important;
     transition: color 0.3s ease;
 }
@@ -487,18 +486,21 @@ a.text-verde-700:hover {
     }
 }
 
-
+/* ----------------------------- 
+    Ajuste de cards para ser del mismo tamaño
+-------------------------------- */
 .benefit-card {
-    min-height: 500px;
-    display: flex;
+display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    height: 100%; 
+    min-height: auto; /* Eliminamos cualquier altura fija previa */
     background-color: #fff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .benefit-card:hover {
     transform: translateY(-10px);
@@ -640,176 +642,124 @@ a.text-verde-700:hover {
 /* ===================================
     NUEVA SECCIÓN: LÍNEA DEL TIEMPO
 =================================== */
-.timeline-section {
-    padding: 100px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-/* Línea central */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background: linear-gradient(to bottom, transparent, white, transparent);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-}
-
-@media (max-width: 768px) {
-    .timeline::after {
-        left: 31px;
-    }
-}
-
-/* Contenedor de cada item */
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-/* Los círculos en la línea */
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -13px;
-    background-color: white;
-    border: 4px solid var(--primary-green);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
-}
-
-/* Items de la izquierda */
-.timeline-item.left {
-    left: 0;
-}
-
-/* Items de la derecha */
-.timeline-item.right {
-    left: 50%;
-}
-
-/* Círculos para items de la derecha */
-.timeline-item.right::after {
-    left: -13px;
-}
-
-/* Contenido de cada item */
-.timeline-content {
-    padding: 25px 30px;
-    background: white;
+/* ===================================
+    TIMELINE HORIZONTAL CUSTOM
+=================================== */
+.timeline-swiper {
+    padding: 60px 30px!important;
     position: relative;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-
-   display: grid;
-   justify-content: center;
-   text-align: center;
 }
 
-.timeline-content:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Flechas del contenido */
-.timeline-item.left .timeline-content::before {
+/* La línea verde horizontal de fondo */
+.timeline-swiper::before {
     content: '';
     position: absolute;
-    top: 20px;
-    right: -15px;
-    border-width: 10px 0 10px 15px;
-    border-style: solid;
-    border-color: transparent transparent transparent white;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    background-color: var(--primary-green); /* Cambio de color a blanco en la líena del tiempo*/
+    z-index: 1;
+    transform: translateY(-50%); 
 }
 
-.timeline-item.right .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: -15px;
-    border-width: 10px 15px 10px 0;
-    border-style: solid;
-    border-color: transparent white transparent transparent;
+.timeline-h-item {
+    height: 250px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+
+
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Año destacado */
-.timeline-year {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-    color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-content h3 {
+/* Estilos en el texto de los reconocimientos*/
+.timeline-h-item p {
     color: var(--primary-green);
-    margin: 15px 0 10px 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0!important;
 }
 
-.timeline-content p {
-    color: var(--gris-700);
-    line-height: 1.6;
-    font-size: 1rem;
+/* Círculo conector en la línea */
+.timeline-h-item::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid var(--primary-green);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
-/* Responsive para móvil */
-@media (max-width: 768px) {
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item.left,
-    .timeline-item.right {
-        left: 0;
-    }
-
-    .timeline-item::after {
-        left: 18px;
-        right: auto;
-    }
-
-    .timeline-item.left .timeline-content::before,
-    .timeline-item.right .timeline-content::before {
-        left: -15px;
-        right: auto;
-        border-width: 10px 15px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    .timeline-content h3 {
-        font-size: 1.2rem;
-    }
-
-    .timeline-year {
-        font-size: 1.2rem;
-        padding: 6px 15px;
-    }
+.timeline-h-year {
+    width: 100px;
+    background: var(--primary-green);
+    color: white;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+.timeline-h-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.timeline-h-card img {
+    max-height: 120px;
+    width: auto;
+}
+
+
+/* Efecto zigzag: uno arriba, uno abajo */
+.swiper-slide:nth-child(odd) .timeline-h-item {
+    margin-bottom: 360px;
+}
+.swiper-slide:nth-child(odd) .timeline-h-item::after {
+    bottom: -75px;
+}
+.swiper-slide:nth-child(odd) .timeline-h-card {
+    margin-top: 0;
+}
+
+.swiper-slide:nth-child(even) .timeline-h-item {
+    flex-direction: column-reverse;
+    margin-top: 360px; 
+}
+
+.swiper-slide:nth-child(even) .timeline-h-item::after {
+    top: -22%;
+}
+.swiper-slide:nth-child(even) .timeline-h-year {
+    margin-top: 10px;
+}
+
+.timeline-h-card:hover {
+    transform: scale(1.1);
+}
 .aliado-membresia-logo {
     width: 380px;
     height: 250px;
@@ -1064,4 +1014,135 @@ footer {
 
 .stat-numero {
     animation: countUp 0.6s ease-out;
+}
+/* =========================================
+   AJUSTES PARA TABLETS 
+   Rango: 768px a 1024px
+========================================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* Ajustar tamaño del título principal para que no se vea enorme */
+    .hero-content h1 {
+        font-size: 2.5rem !important; 
+    }
+
+    /* Ajustar la altura de la portada */
+    .hero-section {
+        min-height: 60vh; /* Un poco menos alto que en escritorio */
+        padding-top: 100px; /* Para que no lo tape el menú de arriba */
+    }
+
+    /* Asegurar que las tarjetas de beneficios no se estiren demasiado */
+    .benefit-card {
+        min-height: auto; /* Dejar que crezcan según el contenido */
+        margin-bottom: 20px;
+    }
+
+    /* Ajustar el padding de la barra dorada inferior */
+    .nav-rrss {
+        padding: 5px 10px;
+    }
+
+    /* Reducir un poco los iconos sociales en el footer fijo */
+    .nav-red-social ul li a {
+        font-size: 1.2rem; 
+    }
+    
+    /* Ajuste para el timeline (Línea del tiempo) en vertical */
+    .timeline::after {
+        left: 31px; /* Mover la línea a la izquierda como en móvil */
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item.right {
+        left: 0;
+    }
+    
+    .timeline-item.left::after, .timeline-item.right::after {
+        left: 18px;
+    }
+    
+    /* Flechas del timeline apuntando siempre a la izquierda */
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+/* =========================================
+   BOTÓN IR ARRIBA (BACK TO TOP)
+========================================= */
+#btnArriba {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 80px; /* 80px para que quede ARRIBA del menú dorado (que mide aprox 60px) */
+    right: 20px;
+    z-index: 99; /* Asegura que flote sobre todo */
+    border: none;
+    outline: none;
+    background-color: var(--verde-oscuro); /* Tu color corporativo */
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%; /* Redondo */
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+#btnArriba:hover {
+    background-color: var(--accent-green); /* Color al pasar el mouse */
+    transform: translateY(-3px); /* Pequeña animación hacia arriba */
+}
+
+/* Ajuste para móviles para que no estorbe */
+@media (max-width: 768px) {
+    #btnArriba {
+        bottom: 100px;
+        right: 15px;
+    }
+}
+
+/* Botón flotante de índice */
+.btn-indice {
+    position: fixed;
+    left: 20px;
+    bottom: 80px; /* Separado del botón de "subir" que ya tienes */
+    z-index: 1040;
+    background-color: #036935; /* Verde institucional */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-indice:hover {
+    background-color: #024d27;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Ajuste para el menú offcanvas */
+.list-group-item-action:hover {
+    border-left: 4px solid #036935;
+    background-color: #f8f9fa;
+    color: #036935;
+}
+
+/* Para que no choque con el botón de ir arriba en móviles */
+@media (max-width: 768px) {
+    .btn-indice {
+        bottom: 100px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 }
