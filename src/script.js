@@ -7,6 +7,8 @@
       initVideoObserver();
       initSmoothScroll();
       initFormSubmission();
+      initAliadosLogic();
+      initTimeline();
   });
 
   // ===================================
@@ -17,6 +19,7 @@
       const nav = document.querySelector('.navegacion-principal');
       const logoSinScroll = document.querySelector('.logo-sin-scroll');
       const logoConScroll = document.querySelector('.logo-con-scroll');
+      
       
       
       // Efecto de scroll en la navegación
@@ -355,7 +358,7 @@
   // Detectar tamaño de pantalla y ajustar comportamientos
   window.addEventListener('resize', debounce(() => {
       // Aquí puedes agregar lógica adicional para resize
-      console.log('Ventana redimensionada');
+    //   console.log('Ventana redimensionada');
   }, 250));
 
   // Función debounce para optimizar eventos
@@ -390,3 +393,83 @@
           imageObserver.observe(img);
       });
   }
+  // ===================================
+// BOTÓN IR ARRIBA (BACK TO TOP)
+// ===================================
+
+// Obtener el botón
+let mybutton = document.getElementById("btnArriba");
+
+// Cuando el usuario hace scroll hacia abajo 300px, mostrar el botón
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Cuando el usuario hace clic, volver al inicio suavemente
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Scroll suave
+  });
+}
+// ===================================
+// LÓGICA DE VISUALIZACIÓN DE ALIADOS
+// ===================================
+
+function initAliadosLogic() {
+    const gridAliados = document.getElementById('grid-aliados-principales');
+    
+    if (gridAliados) {
+        const aliados = gridAliados.querySelectorAll('.aliado-mayor-logo');
+        const numeroDeAliados = aliados.length;
+        
+        // Visibilidad
+        gridAliados.style.display = 'flex';
+        
+        // Remover colisiones
+        gridAliados.classList.remove('justify-content-center', 'justify-content-start');
+
+        // Alineación si hay menos de 6 elementos:
+        if (numeroDeAliados < 6) {
+            gridAliados.classList.add('justify-content-center');
+        } else {
+            // Más de 6
+            gridAliados.classList.add('justify-content-center');
+        }
+
+        // Si son menos de 3, se ajusta el espacio
+        aliados.forEach(aliado => {
+            if (numeroDeAliados <= 2) {
+                aliado.classList.replace('col-md-4', 'col-md-6'); 
+            }
+        });
+    }
+}
+
+// Agrega esto dentro de tu función principal de carga
+function initTimeline() {
+    const timelineSwiper = new Swiper('.timeline-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        grabCursor: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        navigation: {
+            nextEl: '.timeline-next',
+            prevEl: '.timeline-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 }
+        }
+    });
+}
