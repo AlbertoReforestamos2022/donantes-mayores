@@ -842,8 +842,8 @@ display: flex;
 /* Botones de navegación del carrusel */
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--primary-green);
-    background: white;
+    background: var(--primary-green);
+    color: white;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -900,7 +900,7 @@ display: flex;
 .form-custom .form-select {
     border-radius: 8px;
     padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db;
+    border: 1px solid #d1d3d6;
     transition: all 0.3s ease;
 }
 
@@ -917,6 +917,15 @@ display: flex;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
 }
+
+
+/* Aplica a inputs y textareas */
+.form-custom  input::placeholder,
+.form-custom  textarea::placeholder {
+  color: #a4a7ac;  
+  opacity: 1;       /* Asegura visibilidad en Firefox */
+}
+
 
 @media (max-width: 768px) {
     .form-custom {
