@@ -842,8 +842,8 @@ display: flex;
 /* Botones de navegación del carrusel */
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--primary-green);
-    background: white;
+    background: var(--primary-green);
+    color: white;
     width: 50px;
     height: 50px;
     border-radius: 50%;
