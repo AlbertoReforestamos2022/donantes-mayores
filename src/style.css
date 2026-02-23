@@ -279,13 +279,9 @@ a.text-verde-700:hover {
     flex-wrap: wrap;
 }
 
-.nav-red-social {
-    padding-right: 12px;
-}
-
 .nav-tel a,
-.nav-email a,
-.nav-red-social a {
+.nav-email a {
+    font-size: 1.4rem;
     color: var(--white);
     text-decoration: none !important;
     transition: color 0.3s ease;
@@ -294,11 +290,6 @@ a.text-verde-700:hover {
 .nav-tel a:hover,
 .nav-email a:hover {
     color: var(--verde-muy-oscuro);
-}
-
-.nav-red-social ul li a:hover i {
-    transform: scale(1.2);
-    color: var(--verde-oscuro);
 }
 
 /*-------------------------------- 
@@ -1042,11 +1033,6 @@ footer {
     .nav-rrss {
         padding: 5px 10px;
     }
-
-    /* Reducir un poco los iconos sociales en el footer fijo */
-    .nav-red-social ul li a {
-        font-size: 1.2rem; 
-    }
     
     /* Ajuste para el timeline (Línea del tiempo) en vertical */
     .timeline::after {
@@ -1087,8 +1073,8 @@ footer {
     z-index: 99; /* Asegura que flote sobre todo */
     border: none;
     outline: none;
-    background-color: var(--verde-oscuro); /* Tu color corporativo */
-    color: white;
+    color: var(--verde-oscuro); /* Tu color corporativo */
+    background-color: white;
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 50%; /* Redondo */
@@ -1098,7 +1084,8 @@ footer {
 }
 
 #btnArriba:hover {
-    background-color: var(--accent-green); /* Color al pasar el mouse */
+    background-color: var(--primary-green); /* Color al pasar el mouse */
+    color: white;
     transform: translateY(-3px); /* Pequeña animación hacia arriba */
 }
 
@@ -1116,12 +1103,13 @@ footer {
     left: 20px;
     bottom: 80px; /* Separado del botón de "subir" que ya tienes */
     z-index: 1040;
-    background-color: #036935; /* Verde institucional */
-    color: white;
+    background-color: var(--white); 
+    color: var(--primary-green);  /* Verde institucional */
     border: none;
     padding: 12px 20px;
     border-radius: 50px;
     font-weight: 600;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
